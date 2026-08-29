@@ -11,6 +11,22 @@ Use the course link in Moodle to open or update these materials in JupyterHub.
 See Moodle for deadlines, assignment instructions,
 grades, and course announcements.
 
+## Working in JupyterHub
+
+Use the single editable folder `~/NSCI395/course-materials`. Before the class
+Git lesson, newly released paths arrive automatically and existing work is not
+overwritten. After running the instructor-provided `course-git-setup` command,
+commit current work and run `course-sync` before class to merge new releases.
+
+The Git-backed folder uses two standard remotes:
+
+- `upstream` is this public, instructor-maintained source;
+- `origin` is the student's private semester repository.
+
+Use the JupyterLab Git sidebar to review changes, stage, commit, and push to the
+private `origin`. The read-only `~/NSCI395/course-materials-readonly` path is an
+always-current reference and recovery copy.
+
 No graded work should be submitted to this repository. Individual assignments
 and team projects use separate private repositories.
 
