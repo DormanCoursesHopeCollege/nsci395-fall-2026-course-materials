@@ -1,0 +1,14 @@
+# Jupyter and Python working files. These appear as soon as anyone opens a
+# notebook, and this repository is cloned into every student's workspace, so
+# anything committed here is delivered to all of them.
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+
+# Editor and OS clutter
+.DS_Store
+.vscode/
+.idea/
+
+# Never commit graded work to this repository. Assignments and projects use
+# separate private repositories; see the README.
