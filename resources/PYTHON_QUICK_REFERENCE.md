@@ -10,6 +10,40 @@ rate_hz = spike_count / window_s
 
 Use names that preserve the scientific meaning and unit.
 
+## Basic syntax
+
+In `name = expression`, Python evaluates the right-hand expression and assigns
+its value to the name on the left. The arithmetic operators are `+` (add), `-`
+(subtract or mark a negative number), `*` (multiply), and `/` (divide).
+Multiplication and division happen before addition and subtraction unless
+parentheses group another part first.
+
+A line beginning with `#` is a comment for readers. In a function call such as
+`print(rate_hz)`, parentheses hold the argument; commas separate multiple
+arguments. Use `==` to compare two values. It is different from the assignment
+operator `=`.
+
+## Types and explicit conversion
+
+Quotes make text, even when the characters look like a number. Inspect a value
+with `type(...)` and convert numeric text before arithmetic:
+
+```python
+spike_count_text = '12'              # str
+spike_count = int(spike_count_text)  # explicit str-to-int conversion
+window_s = 400 / 1000                # separate ms-to-s unit conversion
+rate_hz = spike_count / window_s
+
+assert type(spike_count_text) == str
+assert type(spike_count) == int
+print(f'Firing rate: {rate_hz:.1f} Hz')
+```
+
+`int(...)` changes Python's representation of the count. Dividing by 1000
+changes the physical unit represented by the duration. The rate expression
+performs the calculation, and the f-string controls presentation; the letters
+`Hz` do not validate the earlier conversion.
+
 ## Functions
 
 ```python
